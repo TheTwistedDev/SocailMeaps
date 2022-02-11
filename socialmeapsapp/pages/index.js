@@ -1,10 +1,12 @@
 import Head from 'next/head'
-import dynamic from 'next/dynamic'
+// import dynamic from 'next/dynamic'
 import Header from '../components/Header'
 import Sidebar from '../components/Sidebar'
 import Login from '../components/Login'
+import ChatComponent from '../components/ChatComponent'
 import { useSession } from "next-auth/react"
-const ChatComponent = dynamic(() => import('../components/ChatComponent'), { ssr: false });
+// const ChatComponent = dynamic(() => import('../components/ChatComponent'), { ssr: false });
+
 
 export default function Home() {
 
@@ -25,7 +27,7 @@ export default function Home() {
       {/* displays the tab information */}
 
       <Head>
-        <title>SocialMeaps - Login</title>
+        <title>SocialMeaps - Home</title>
         <meta name="description" content="" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -33,8 +35,12 @@ export default function Home() {
       {/* display the page components */}
 
       <Header />
-      <Sidebar />
-      <ChatComponent />
+
+      <main className="flex">
+        <Sidebar />
+        <ChatComponent />
+      </main>
+     
 
     </div>
   )  

@@ -21,11 +21,11 @@ function Header() {
             {/* Center */}
 
             <div className="flex ml-auto mr-auto self-center items-center rounded-full bg-gray-200 p-2">
-                    <SearchIcon className="h-6 text-gray-600 ml-2"/>
-                    <input className="flex flex-grow ml-2 items-center bg-transparent outline-none 
+                    <SearchIcon className="h-6 text-gray-500 ml-2 cursor-pointer"/>
+                    <input className="flex grow ml-2 items-center bg-transparent outline-none 
                     placeholder-grey-500 w-96" 
                     type="text" 
-                    placeholder="Search SocailMeaps" />
+                    placeholder="Search SocialMeaps" />
             </div>
 
             {/* Right */}

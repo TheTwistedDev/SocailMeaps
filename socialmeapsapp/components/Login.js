@@ -26,7 +26,7 @@ function Login () {
                         height={40}
                         objectFit='contain'
                     />
-                    <button className=" w-fit rounded-full bg-blue-500 text-white p-3 " onClick={signIn}> Login with Facebook </button> */}
+                    <button className=" w-fit rounded-full bg-blue-500 text-white p-3 " onClick={() => signIn('facebook')}> Login with Facebook </button> */}
                     
                     {/* display the google logo */}
 
