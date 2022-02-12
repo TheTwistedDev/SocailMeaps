@@ -1,9 +1,16 @@
 import Image from 'next/image'
 
 function SidebarRow({id, src, Icon, title, onClick}) {
+  var tailcss =  ''
+
+  if (id == "sidebarDMsg") {
+    tailcss = 'flex  max-h-12 items-center space-x-2 p-4 hover:bg-gray-200 rounded-xl cursor-pointer'
+  } else {
+    tailcss  = 'flex items-center space-x-2 p-4 hover:bg-gray-200 rounded-xl cursor-pointer'
+  }
 
   return (
-    <div onClick={onClick} id={id} className='flex items-center space-x-2 p-4 hover:bg-gray-200 rounded-xl cursor-pointer '>
+    <div onClick={onClick} id={id} className={tailcss}>
       {src && (
         <Image 
         className='rounded-full'
