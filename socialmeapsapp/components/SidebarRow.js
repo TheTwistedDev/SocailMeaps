@@ -2,11 +2,14 @@ import Image from 'next/image'
 
 function SidebarRow({id, src, Icon, title, onClick}) {
   var tailcss =  ''
+  var imgSize = 0
 
   if (id == "sidebarDMsg") {
-    tailcss = 'flex  max-h-12 items-center space-x-2 p-4 hover:bg-gray-200 rounded-xl cursor-pointer'
+    tailcss = 'flex  max-h-10 items-center space-x-2 p-4 hover:bg-gray-200 rounded-xl cursor-pointer'
+    imgSize = 30
   } else {
     tailcss  = 'flex items-center space-x-2 p-4 hover:bg-gray-200 rounded-xl cursor-pointer'
+    imgSize = 40
   }
 
   return (
@@ -15,8 +18,8 @@ function SidebarRow({id, src, Icon, title, onClick}) {
         <Image 
         className='rounded-full'
         src={src}
-        width={40}
-        height={40}
+        width={imgSize}
+        height={imgSize}
         layout='fixed'
         />  
       )}
