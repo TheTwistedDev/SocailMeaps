@@ -34,7 +34,7 @@ function Header() {
 
                 {/* display the user profile image and user profile name */}
 
-                <div className="flex items-center pl-1 border-2 rounded-full border-slate-300 cursor-pointer">
+                <div className="flex items-center pl-1 border-2 rounded-full border-slate-300 cursor-pointer hover:bg-gray-200">
                     <Image
                         className="rounded-full self-center"
                         src={session.user.image}

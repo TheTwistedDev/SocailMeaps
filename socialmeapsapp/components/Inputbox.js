@@ -9,12 +9,12 @@ function Inputbox() {
     const inputRef = useRef(null)
 
     const sendPost = async (e) => {
+        // prevents page refresh on execution
         e.preventDefault()
-
+        // returns current value if not an empty string
         if(!inputRef.current.value)  return
-
-
-
+        
+        // resets the current value to be empty
         inputRef.current.value = ''
 
     } 

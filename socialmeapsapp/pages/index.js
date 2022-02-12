@@ -3,7 +3,6 @@ import Head from 'next/head'
 import Header from '../components/Header'
 import Sidebar from '../components/Sidebar'
 import Login from '../components/Login'
-import ChatComponent from '../components/ChatComponent'
 import { useSession } from "next-auth/react"
 // const ChatComponent = dynamic(() => import('../components/ChatComponent'), { ssr: false });
 
@@ -11,17 +10,16 @@ import { useSession } from "next-auth/react"
 export default function Home() {
 
   const {data : session } = useSession()
-
   console.log(session)
+ 
 
   // If there is not a session display the login component
 
   if (!session) return <Login />
+  
 
   // Else display the home page 
-
   return (
-
     <div> 
 
       {/* displays the tab information */}
@@ -38,7 +36,6 @@ export default function Home() {
 
       <main className="flex">
         <Sidebar />
-        <ChatComponent />
       </main>
      
 
