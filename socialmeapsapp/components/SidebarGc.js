@@ -15,8 +15,8 @@ function SidebarGc() {
         <p className="flex ml-auto mr-auto mt-2 mb-2 text-lg font-semibold text-slate-700">Group Chats</p>
         <PlusIcon className="mr-3 mb-auto mt-auto h-6 text-slate-500 cursor-pointer"/>
       </div>
-      <SidebarRow onClick = {(e) => setSidebarId(e.currentTarget.id)} 
-        id="sidebarDMsg" src={session.user.image} title={session.user.name} />
+      {/* <SidebarRow onClick = {(e) => setSidebarId(e.currentTarget.id)} 
+        id="sidebarDMsg" src={session.user.image} title={session.user.name} /> */}
     </div>
   )
 }

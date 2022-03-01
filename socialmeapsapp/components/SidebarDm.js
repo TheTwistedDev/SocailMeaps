@@ -17,8 +17,8 @@ function SidebarDm() {
       </div>
       
       <div>
-      <SidebarRow onClick = {(e) => setSidebarId(e.currentTarget.id)} 
-        id="sidebarDMsg" src={session.user.image} title={session.user.name} />
+      {/* <SidebarRow onClick = {(e) => setSidebarId(e.currentTarget.id)} 
+        id="sidebarDMsg" src={session.user.image} title={session.user.name} /> */}
       </div>
     </div>
   )
