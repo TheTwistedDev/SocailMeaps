@@ -3,7 +3,6 @@ import {
     PlusCircleIcon
 } from '@heroicons/react/Solid'
 import { useRef } from 'react'
-import { Client as FaunaClient } from 'faunadb'
 
 function Inputbox() {
     const inputRef = useRef(null)

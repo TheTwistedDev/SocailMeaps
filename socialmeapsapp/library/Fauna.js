@@ -9,3 +9,22 @@ const serverClient = new FaunaClient({
   port: 443,
 })
 
+const getContacts = async (email) => {
+  const { data } = await serverClient.query(
+    q.Get(q.Match(q.Index('user_by_email'), email))
+  )
+  return data.contacts
+}
+
+const addContact = async (email, emailToAdd) => {
+  const { data } = await serverClient.query(
+    q.Update(q.Match(q.Index('user_by_email'), email),
+    { data: {contacts: [,emailToAdd]}})
+  )
+  return data.contacts
+}
+
+module.exports = {
+  getContacts, 
+  addContact,
+}
