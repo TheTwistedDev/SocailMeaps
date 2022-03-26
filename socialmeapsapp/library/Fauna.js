@@ -1,5 +1,5 @@
 import { Client as FaunaClient } from "faunadb"
-import fuanadb, {query as q} from 'faunadb'
+import {query as q} from 'faunadb'
 
 
 const serverClient = new FaunaClient({
@@ -19,7 +19,7 @@ const getContacts = async (email) => {
 const addContact = async (email, emailToAdd) => {
   const { data } = await serverClient.query(
     q.Update(q.Match(q.Index('user_by_email'), email),
-    { data: {contacts: [,emailToAdd]}})
+    { data: {contacts: [...emailToAdd]}})
   )
   return data.contacts
 }

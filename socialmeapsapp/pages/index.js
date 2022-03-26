@@ -3,7 +3,6 @@ import Head from 'next/head'
 import Header from '../components/Header'
 import Sidebar from '../components/Sidebar'
 import Login from '../components/Login'
-import AccountModal from '../components/AccountModal'
 import { useSession } from "next-auth/react"
 // const ChatComponent = dynamic(() => import('../components/ChatComponent'), { ssr: false });
 
@@ -32,11 +31,7 @@ export default function Home() {
       {/* display the page components */}
 
       <Header />
-
-      <main className="flex" >
-        <Sidebar />
-        <AccountModal />
-      </main>
+      <Sidebar />
      
     </div>
   )  

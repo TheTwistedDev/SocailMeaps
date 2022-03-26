@@ -2,6 +2,7 @@
 import { useSession } from "next-auth/react"
 import SidebarRow from '../components/SidebarRow'
 import SidebarDisplay from '../components/SidebarDisplay'
+import ContactModal from '../components/ContactModal'
 import { 
     UserGroupIcon,
     UsersIcon,
@@ -14,7 +15,7 @@ function Sidebar() {
     const [sidebarId, setSidebarId] = useState('')
 
   return  (
-      <div className="h-myscreen p-2 max-w-[450px] xl:min-w-[300px] shadow-xl">
+      <div className="h-myscreen p-2 max-w-max xl:min-w-[300px] shadow-xl">
           {/* displays Sidebar Elements for toggling sidebar displays */}
           <SidebarRow onClick = {(e) => setSidebarId(e.currentTarget.id)} id="account" src={session.user.image} title={session.user.name} />
           <SidebarRow onClick = {(e) => setSidebarId(e.currentTarget.id)} id="dm" Icon={UsersIcon} title="Direct Messages"/>
@@ -22,6 +23,7 @@ function Sidebar() {
           {/* Display a component for message channel crud opperations */}
           <p className=" border-t-2 border-slate mt-2" ></p>
           <SidebarDisplay id={sidebarId} title={sidebarId.title}/>
+          <ContactModal />
       </div>
 
   )
