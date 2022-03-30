@@ -18,7 +18,7 @@ export default function Home() {
 
   // Else display the home page 
   return (
-    <div > 
+    <div> 
 
       {/* displays the tab information */}
 

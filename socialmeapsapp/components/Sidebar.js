@@ -22,8 +22,9 @@ function Sidebar() {
           <SidebarRow onClick = {(e) => setSidebarId(e.currentTarget.id)} id="groupChat"  Icon={UserGroupIcon} title="Group Chats" />
           {/* Display a component for message channel crud opperations */}
           <p className=" border-t-2 border-slate mt-2" ></p>
-          <SidebarDisplay id={sidebarId} title={sidebarId.title}/>
           <ContactModal />
+          <SidebarDisplay id={sidebarId} title={sidebarId.title}/>
+          
       </div>
 
   )

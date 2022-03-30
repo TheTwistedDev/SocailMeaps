@@ -5,7 +5,7 @@ function SidebarRow({id, src, Icon, title, onClick}) {
   var imgSize = 0
 
   if (id == "sidebarDMsg") {
-    tailcss = 'flex  max-h-10 items-center space-x-2 p-4 hover:bg-gray-200 rounded-xl cursor-pointer'
+    tailcss = 'flex  max-h-10 items-center space-x-2 p-4 hover:bg-gray-200 rounded-xl cursor-pointer mb-2'
     imgSize = 30
   } else {
     tailcss  = 'flex items-center space-x-2 p-4 hover:bg-gray-200 rounded-xl cursor-pointer'

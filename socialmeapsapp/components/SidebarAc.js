@@ -4,15 +4,18 @@ import {
 } from '@heroicons/react/Solid'
 import { useRecoilState } from 'recoil'
 import { contactModalState } from "../atoms/contactModalAtom"
-import { useRef } from 'react'
+import { useSession } from "next-auth/react" 
+import { getUserByEmail, addContact } from '../library/Fauna'
 
 
 function SidebarAc() {
   const [showContactModal, setShowContactModal] = useRecoilState(contactModalState)
+  const {data : session } = useSession()
 
   const openContactModal = () => {
     setShowContactModal(true)
   }
+
 
   return (
     <div className="" >
@@ -21,8 +24,8 @@ function SidebarAc() {
         <PlusIcon onClick = {openContactModal} className="mr-3 mb-auto mt-auto h-6 text-slate-500 cursor-pointer"/>
       </div>
       <div className="flex-row">
-        {/* <SidebarRow onClick = {(e) => setSidebarId(e.currentTarget.id)} 
-          id="sidebarDMsg" src={session.user.image} title={session.user.name} /> */}
+        <SidebarRow  
+          id="sidebarDMsg" src={session.user.image} title={session.user.name} />
       </div>
     </div>
   )

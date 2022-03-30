@@ -42,19 +42,19 @@ function ContactModal() {
     return (
         <div className="" >
                 {showContactModal && 
-                <div className="border-t-2 border-b-2">
+                <div className="border-b-2">
                     <div className="flex">
                         <h1 className="mr-auto ml-auto mt-4 mb-2 text-lg font-semibold text-slate-700"> Add Contact </h1>
                         <XIcon className="mr-2 h-6 self-center text-gray-500 cursor-pointer hover:text-blue-500" onClick={() => setShowContactModal(false)}/>
                     </div>         
-                    <div className="flex m-3 rounded-full bg-gray-200 p-2">
+                    <form className="flex m-3 rounded-full bg-gray-200 p-2">
                         <SearchIcon className="h-6 text-gray-500 ml-2 cursor-pointer"/>
                         <input className="flex grow ml-2 items-center bg-transparent outline-none 
                         placeholder-grey-500" 
                         type="text" 
                         ref={inputRef}
                         placeholder="Enter Email Address" />
-                    </div>
+                    </form>
                 </div>
                 }
         </div>

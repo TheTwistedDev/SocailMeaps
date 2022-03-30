@@ -1,30 +1,38 @@
-import { Client as FaunaClient } from "faunadb"
-import {query as q} from 'faunadb'
+import fuanadb, {query as q} from 'faunadb'
 
 
-const serverClient = new FaunaClient({
+
+const serverClient = new fuanadb.Client({
   secret: process.env.FAUNA_SERVER_SECRET,
-  scheme: 'https',
   domain: 'db.us.fauna.com',
-  port: 443,
+  port: 8443,
+  scheme: 'https',
 })
 
-const getContacts = async (email) => {
-  const { data } = await serverClient.query(
+const getUserByEmail = async (email) => {
+  return await serverClient.query(
     q.Get(q.Match(q.Index('user_by_email'), email))
   )
-  return data.contacts
 }
 
-const addContact = async (email, emailToAdd) => {
-  const { data } = await serverClient.query(
-    q.Update(q.Match(q.Index('user_by_email'), email),
-    { data: {contacts: [...emailToAdd]}})
+
+
+const getContacts = async (email) => {
+  
+}
+
+const addContact = async (email) => {
+  return await serverClient.query(
+    q.Create(q.Collection('Contacts'), {
+      data : { 
+        email, 
+      },
+    })
   )
-  return data.contacts
 }
 
 module.exports = {
   getContacts, 
   addContact,
+  getUserByEmail,
 }
