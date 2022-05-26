@@ -3,6 +3,7 @@ import Head from 'next/head'
 import Login from '../components/Login'
 import Header from '../components/Header'
 import { useSession } from "next-auth/react"
+import Link from 'next/link'
 
 const Home: NextPage = () => {
 
@@ -19,10 +20,17 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div >
-
+      <div className="w-screen h-screen">
         {/* display the page components */}
         <Header />
+        <div className="grid grid-cols-4">
+          {/* <Link href="/chat">
+            <a className="col-span-1 col-start-2 p-5 m-5 text-2xl font-bold text-blue-600 rounded-md shadow-md"> Chat </a>
+          </Link> */}
+          <Link href="/calendar">
+            <a className="col-span-1 col-start-3 p-5 m-5 text-2xl font-bold text-blue-600 rounded-md shadow-md"> Calendar </a>
+          </Link>
+        </div>
       </div>
      
     </div>
