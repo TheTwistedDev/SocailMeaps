@@ -25,10 +25,10 @@ const Home: NextPage = () => {
         <Header />
         <div className="grid grid-cols-4">
           {/* <Link href="/chat">
-            <a className="col-span-1 col-start-2 p-5 m-5 text-2xl font-bold text-blue-600 rounded-md shadow-md"> Chat </a>
+            <a className="col-span-1 col-start-2 p-5 m-5 text-2xl font-bold text-center text-blue-600 rounded-md shadow-md"> Chat </a>
           </Link> */}
           <Link href="/calendar">
-            <a className="col-span-1 col-start-3 p-5 m-5 text-2xl font-bold text-blue-600 rounded-md shadow-md"> Calendar </a>
+            <a className="col-span-1 col-start-3 p-5 m-5 text-2xl font-bold text-center text-blue-600 rounded-md shadow-md"> Calendar </a>
           </Link>
         </div>
       </div>

@@ -1,6 +1,11 @@
+import Header from "../components/Header"
+
+
 const calendar = () => {
   return (
-    <div>calendar</div>
+    <div>
+      <Header />
+    </div>
   )
 }
 export default calendar
